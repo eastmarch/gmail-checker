@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head><meta charset="UTF-8"></head>
+    <link type="text/css" rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <div class="logo"></div>
+    <div class="title">Check Gmail for all unread emails every:</div>
+    <div class="option">
+      <input type="number" min=1 id="interval">
+      <label>minute(s).</label>
+    </div>
+    <div class="title">Maximum number of logged-in Gmail accounts to check:</div>
+    <div class="option">
+      <input type="number" min=1 id="number">
+      <label>account(s).</label>
+    </div>
+    <div class="title">When I click on the toolbar icon, open account number:</div>
+    <div class="option">
+      <input type="number" min=1 id="main">
+      <label>(1st account by default).</label>
+    </div>
+    <div class="btnrow">
+      <button id="btnreset">↺ Reset</button>
+    </div>
+    <script type="text/javascript" src="options.js"></script>
+  </body>
+</html>

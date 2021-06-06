@@ -1,0 +1,87 @@
+body {
+  color: #555;
+  padding: 20px;
+  font-size: 12px;
+  margin: auto;
+  font-family: arial, sans-serif;
+}
+
+label {
+  margin-left: 5px;
+  user-select: none;
+  vertical-align: middle;
+}
+
+input[type="number"] {
+  vertical-align: middle;
+  color: #555;
+  width: 128px;
+  padding: 10px;
+  margin: 0px;
+  border: solid 1px rgb(69, 69, 69);
+  text-align: right;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 7px;
+  user-select: none;
+  font-weight: bold;
+}
+
+.option {
+  text-align: left;
+}
+
+.logo {
+  height: 128px;
+  border-bottom: solid 1px rgb(69, 69, 69);
+  background: url('../icons/128.png') no-repeat center center;
+  background-size: 64px;
+}
+
+.btnrow{
+  text-align: right;
+  margin-top: 12px;
+}
+
+#btnreset {
+  background: rgba(204, 58, 13, 0.1);
+  border-radius: 2px;
+  border: 1px solid rgb(236 121 86);
+  padding: 8px 14px;
+  color: rgb(236 121 86);
+  text-shadow: none;
+  box-shadow: none;
+}
+
+#btnreset:hover {
+  background: rgba(204, 58, 13, 0.25);
+}
+
+#btnreset:active {
+  background: rgba(204, 58, 13, 0.4);
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(74, 74, 74);
+    color: antiquewhite;
+  }
+
+  .logo {
+    border-bottom: solid 1px rgb(104, 104, 104);
+  }
+
+  input[type="number"] {
+    color: antiquewhite;
+    background-color: rgb(74, 74, 74);
+    border: solid 1px rgb(104, 104, 104);
+  }
+}

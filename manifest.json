@@ -1,0 +1,41 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "lib/config.js", "lib/chrome.js", "lib/runtime.js", "lib/common.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "data/icons/16.png",
+         "32": "data/icons/32.png",
+         "48": "data/icons/48.png",
+         "64": "data/icons/64.png"
+      },
+      "default_title": "Gmail Checker"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "data/content_script/inject.js" ],
+      "matches": [ "*://*.mail.google.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Shows badge notification for unread emails.",
+   // "homepage_url": "",
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
+   },
+   // "key": "",
+   "manifest_version": 2,
+   "name": "Gmail Checker",
+   "options_ui": {
+      "chrome_style": true,
+      "open_in_tab": false,
+      "page": "data/options/options.html"
+   },
+   "permissions": [ "*://mail.google.com/*", "storage", "alarms" ],
+   "short_name": "gmail-checker",
+   "version": "0.8"
+}
