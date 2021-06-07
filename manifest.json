@@ -1,7 +1,22 @@
 {
+   "name": "Gmail Checker",
+   "version": "0.8",
+   "manifest_version": 2,
+   "short_name": "gmail-checker",
+   "description": "Shows badge notification for unread emails.",
+   "homepage_url": "https://github.com/eastmarch/gmail-checker",
+   "permissions": [ "*://mail.google.com/*", "storage", "alarms", "contextMenus" ],
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsFP50QxjZh1caxpFNcU/D2LjDQB/lvHrwZhvLHS1uB8AX23WJLLlZM7v34XovkkY5vWzOn/zGA3rWt3ieBdAJpgrwNfKUPgJY2SmorQ3xQOX/PTdO2Jslk6w3+0bWMZJqJ6gnqflYHzKO5+Ms9QKfOEOa5ix3cBZRzgjEiT4/NIAb/dL9D5U66XGs7Q2gffuNSj+eWwpgXg6lo3XjyoThYzBnDpgPJYW07JvjaI2ln59gCG3ffAmDYdgfkrmzQLsRUdgNx/2e+X7ONFQ1/Fipp4wM/SNQo6i4W/ymzuxFPPo0rcj4PzaxDox/fDEtccVadXY8VcMG3B+9CgQaUsx4wIDAQAB",
    "background": {
       "persistent": false,
-      "scripts": [ "lib/config.js", "lib/chrome.js", "lib/runtime.js", "lib/common.js" ]
+      "scripts": [ "lib/config.js", "lib/chrome.js", "lib/common.js" ]
+   },
+   "icons": {
+      "128": "data/icons/128.png",
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png",
+      "48": "data/icons/48.png",
+      "64": "data/icons/64.png"
    },
    "browser_action": {
       "default_icon": {
@@ -12,30 +27,16 @@
       },
       "default_title": "Gmail Checker"
    },
-   "content_scripts": [ {
-      "all_frames": false,
-      "js": [ "data/content_script/inject.js" ],
-      "matches": [ "*://*.mail.google.com/*" ],
-      "run_at": "document_idle"
-   } ],
-   "description": "Shows badge notification for unread emails.",
-   // "homepage_url": "",
-   "icons": {
-      "128": "data/icons/128.png",
-      "16": "data/icons/16.png",
-      "32": "data/icons/32.png",
-      "48": "data/icons/48.png",
-      "64": "data/icons/64.png"
-   },
-   // "key": "",
-   "manifest_version": 2,
-   "name": "Gmail Checker",
    "options_ui": {
       "chrome_style": true,
       "open_in_tab": false,
       "page": "data/options/options.html"
    },
-   "permissions": [ "*://mail.google.com/*", "storage", "alarms" ],
-   "short_name": "gmail-checker",
-   "version": "0.8"
+   "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Alt+G"
+        }
+      }
+    }
 }
