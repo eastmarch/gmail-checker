@@ -1,11 +1,11 @@
 {
    "name": "Gmail Checker",
-   "version": "0.9",
+   "version": "1.0",
    "manifest_version": 2,
    "short_name": "gmail-checker",
    "description": "Shows badge notification for unread emails.",
    "homepage_url": "https://github.com/eastmarch/gmail-checker",
-   "permissions": [ "*://mail.google.com/*", "storage", "alarms", "contextMenus" ],
+   "permissions": [ "https://mail.google.com/*", "storage", "alarms", "contextMenus" ],
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsFP50QxjZh1caxpFNcU/D2LjDQB/lvHrwZhvLHS1uB8AX23WJLLlZM7v34XovkkY5vWzOn/zGA3rWt3ieBdAJpgrwNfKUPgJY2SmorQ3xQOX/PTdO2Jslk6w3+0bWMZJqJ6gnqflYHzKO5+Ms9QKfOEOa5ix3cBZRzgjEiT4/NIAb/dL9D5U66XGs7Q2gffuNSj+eWwpgXg6lo3XjyoThYzBnDpgPJYW07JvjaI2ln59gCG3ffAmDYdgfkrmzQLsRUdgNx/2e+X7ONFQ1/Fipp4wM/SNQo6i4W/ymzuxFPPo0rcj4PzaxDox/fDEtccVadXY8VcMG3B+9CgQaUsx4wIDAQAB",
    "background": {
       "persistent": false,
